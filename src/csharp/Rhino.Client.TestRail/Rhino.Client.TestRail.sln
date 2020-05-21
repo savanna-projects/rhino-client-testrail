@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rhino.Client.TestRail", "Rhino.Client.TestRail\Rhino.Client.TestRail.csproj", "{5520C8EC-15F3-4C11-A4C6-E23AA3D7841B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{064A4D66-ECB0-4472-9B94-55AD8268D3D8}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\azure_pipelines_csharp.yml = ..\..\..\azure_pipelines_csharp.yml
+		..\..\..\azure_settings.runsettings = ..\..\..\azure_settings.runsettings
+		..\..\..\README.md = ..\..\..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5520C8EC-15F3-4C11-A4C6-E23AA3D7841B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5520C8EC-15F3-4C11-A4C6-E23AA3D7841B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5520C8EC-15F3-4C11-A4C6-E23AA3D7841B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5520C8EC-15F3-4C11-A4C6-E23AA3D7841B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {96E0FFEA-2121-49EC-B775-533048B1A4F1}
+	EndGlobalSection
+EndGlobal
