@@ -12,7 +12,7 @@ namespace Rhino.Client.TestRail.Contracts
     /// contract which describes test-rail user entity
     /// </summary>
     [DataContract]
-    public class TestRailUser
+    public class TestRailUser : Contract
     {
         /// <summary>
         /// The email address of the user as configured in TestRail

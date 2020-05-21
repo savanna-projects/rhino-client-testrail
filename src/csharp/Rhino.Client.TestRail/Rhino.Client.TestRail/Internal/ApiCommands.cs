@@ -8,7 +8,8 @@ namespace Rhino.Client.TestRail.Internal
 {
     public static class ApiCommands
     {
-        private const string API = "index.php?/api/v2";
+        private const string SERVICE = "index.php?";
+        private const string API = SERVICE + "/api/v2";
 
         #region *** controller: attachments   ***
         // POST index.php?/api/v2/add_attachment_to_result/:result_id
@@ -65,7 +66,7 @@ namespace Rhino.Client.TestRail.Internal
         /// <summary>
         /// returns a list of test cases for a test suite or specific section in a test suite
         /// </summary>
-        public const string GET_CASE_PROJECT_SUITE = API + "/get_cases/{0}&suite_id={1}";
+        public const string GET_CASES_PROJECT_SUITE = API + "/get_cases/{0}&suite_id={1}";
 
         // POST index.php?/api/v2/add_case/:section_id
         /// <summary>
@@ -85,6 +86,26 @@ namespace Rhino.Client.TestRail.Internal
         /// Deletes an existing test case.
         /// </summary>
         public const string DELETE_CASE = API + "/delete_case/{0}";
+        #endregion
+
+        #region *** controller: case fields   ***
+        // GET index.php?/api/v2/get_case_fields
+        /// <summary>
+        /// Returns a list of available test case custom fields.
+        /// </summary>
+        public const string GET_CASE_FIELDS = API + "/get_case_fields";
+
+        // POST index.php?/api/v2/add_case_field
+        /// <summary>
+        /// Creates a new test case custom field.
+        /// </summary>
+        public const string ADD_CASE_FIELD = API + "/add_case_field";
+
+        // POST index.php?/admin/fields/delete/:custom_field_id
+        /// <summary>
+        /// Delete a custom field (any by id)
+        /// </summary>
+        public const string DELETE_CASE_FIELD = SERVICE + "/admin/fields/delete/{0}";
         #endregion
 
         #region *** controller: configuration ***
@@ -227,6 +248,14 @@ namespace Rhino.Client.TestRail.Internal
         public const string DELETE_PLAN_ENTRY = API + "/delete_plan_entry/{0}/{1}";
         #endregion
 
+        #region *** controller: priorities    ***
+        // GET index.php?/api/v2/get_priorities
+        /// <summary>
+        /// Returns a list of available priorities.
+        /// </summary>
+        public const string GET_PRIORITIES = API + "/get_priorities";
+        #endregion
+
         #region *** controller: projects      ***
         // GET index.php?/api/v2/get_project/:project_id
         /// <summary>
@@ -244,7 +273,7 @@ namespace Rhino.Client.TestRail.Internal
         /// <summary>
         /// Creates a new project (administrator status required).
         /// </summary>
-        public const string ADD_PROJECT = API + "/v2/add_project";
+        public const string ADD_PROJECT = API + "/add_project";
 
         // POST index.php?/api/v2/update_project/:project_id
         /// <summary>
@@ -377,6 +406,38 @@ namespace Rhino.Client.TestRail.Internal
         /// Deletes an existing test run.
         /// </summary>
         public const string DELETE_RUN = API + "/delete_run/{0}";
+        #endregion
+
+        #region *** controller: sections      ***
+        // GET index.php?/api/v2/get_section/:section_id
+        /// <summary>
+        /// Returns an existing section.
+        /// </summary>
+        public const string GET_SECTION = API + "/get_section/{0}";
+
+        // GET index.php?/api/v2/get_sections/:project_id&suite_id=:suite_id
+        /// <summary>
+        /// Returns a list of sections for a project and test suite.
+        /// </summary>
+        public const string GET_SECTIONS = API + "/get_sections/{0}&suite_id={1}";
+
+        // POST index.php?/api/v2/add_section/:project_id
+        /// <summary>
+        /// Creates a new section.
+        /// </summary>
+        public const string ADD_SECTION = API + "/add_section/{0}";
+
+        // POST index.php?/api/v2/update_section/:section_id
+        /// <summary>
+        /// Updates an existing section (partial updates are supported, i.e. you can submit and update specific fields only).
+        /// </summary>
+        public const string UPDATE_SECTION = API + "/update_section/{0}";
+
+        // POST index.php?/api/v2/delete_section/:section_id
+        /// <summary>
+        /// Deletes an existing section.
+        /// </summary>
+        public const string DELETE_SECTION = API + "/delete_section/{0}";
         #endregion
 
         #region *** controller: suites        ***

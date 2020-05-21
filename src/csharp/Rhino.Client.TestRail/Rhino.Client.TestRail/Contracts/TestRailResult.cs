@@ -40,7 +40,7 @@ namespace Rhino.Client.TestRail.Contracts
         public int CustomSeverity { get; set; }
 
         [DataMember]
-        public CustomStep[] CustomStepResults { get; set; }
+        public TestRailCustomStep[] CustomStepResults { get; set; }
 
         [DataMember]
         public int CustomTolerance { get; set; }
@@ -74,6 +74,12 @@ namespace Rhino.Client.TestRail.Contracts
         /// </summary>
         [DataMember]
         public int TestId { get; set; }
+
+        /// <summary>
+        /// The ID of the test-case this test result belongs to
+        /// </summary>
+        [DataMember]
+        public int CaseId { get; set; }
 
         /// <summary>
         /// The version or build you tested against

@@ -25,7 +25,7 @@ namespace Rhino.Client.TestRail.Contracts
         /// gets or sets the amount of tests in the test run marked as blocked
         /// </summary>
         [DataMember]
-        public int? BlockedCount { get; set; }
+        public int BlockedCount { get; set; }
 
         /// <summary>
         /// gets or sets the date/time when the test run was closed (as UNIX time-stamp)
@@ -67,43 +67,43 @@ namespace Rhino.Client.TestRail.Contracts
         /// gets or sets the amount of tests in the test run with the respective custom status
         /// </summary>
         [DataMember]
-        public int? CustomStatus1Count { get; set; }
+        public int CustomStatus1Count { get; set; }
 
         /// <summary>
         /// gets or sets the amount of tests in the test run with the respective custom status
         /// </summary>
         [DataMember]
-        public int? CustomStatus2Count { get; set; }
+        public int CustomStatus2Count { get; set; }
 
         /// <summary>
         /// gets or sets the amount of tests in the test run with the respective custom status
         /// </summary>
         [DataMember]
-        public int? CustomStatus3Count { get; set; }
+        public int CustomStatus3Count { get; set; }
 
         /// <summary>
         /// gets or sets the amount of tests in the test run with the respective custom status
         /// </summary>
         [DataMember]
-        public int? CustomStatus4Count { get; set; }
+        public int CustomStatus4Count { get; set; }
 
         /// <summary>
         /// gets or sets the amount of tests in the test run with the respective custom status
         /// </summary>
         [DataMember]
-        public int? CustomStatus5Count { get; set; }
+        public int CustomStatus5Count { get; set; }
 
         /// <summary>
         /// gets or sets the amount of tests in the test run with the respective custom status
         /// </summary>
         [DataMember]
-        public int? CustomStatus6Count { get; set; }
+        public int CustomStatus6Count { get; set; }
 
         /// <summary>
         /// gets or sets the amount of tests in the test run with the respective custom status
         /// </summary>
         [DataMember]
-        public int? CustomStatus7Count { get; set; }
+        public int CustomStatus7Count { get; set; }
 
         /// <summary>
         /// gets or sets the description of the test run
@@ -111,23 +111,29 @@ namespace Rhino.Client.TestRail.Contracts
         [DataMember]
         public string Description { get; set; }
 
+        [DataMember]
+        public string EntryId { get; set; }
+
+        [DataMember]
+        public int EntryIndex { get; set; }
+
         /// <summary>
         /// gets or sets the amount of tests in the test run marked as failed
         /// </summary>
         [DataMember]
-        public int? FailedCount { get; set; }
+        public int FailedCount { get; set; }
 
         /// <summary>
         /// gets or sets the unique ID of the test run
         /// </summary>
         [DataMember]
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// gets or set a value to true if the test run includes all test cases and false otherwise
         /// </summary>
         [DataMember]
-        public bool? IncludeAll { get; set; }
+        public bool IncludeAll { get; set; }
 
         /// <summary>
         /// gets or set a value to true if the test run was closed and false otherwise
@@ -145,7 +151,7 @@ namespace Rhino.Client.TestRail.Contracts
         /// gets or sets the ID of the test plan this test run belongs to
         /// </summary>
         [DataMember]
-        public int? PlanId { get; set; }
+        public int PlanId { get; set; }
 
         /// <summary>
         /// gets or sets the name of the test run
@@ -157,31 +163,31 @@ namespace Rhino.Client.TestRail.Contracts
         /// gets or sets the amount of tests in the test run marked as passed
         /// </summary>
         [DataMember]
-        public int? PassedCount { get; set; }
+        public int PassedCount { get; set; }
 
         /// <summary>
         /// gets or sets the ID of the project this test run belongs to
         /// </summary>
         [DataMember]
-        public int? ProjectId { get; set; }
+        public int ProjectId { get; set; }
 
         /// <summary>
         /// gets or sets the amount of tests in the test run marked as retest
         /// </summary>
         [DataMember]
-        public int? RetestCount { get; set; }
+        public int RetestCount { get; set; }
 
         /// <summary>
         /// gets or sets the ID of the test suite this test run is derived from
         /// </summary>
         [DataMember]
-        public int? SuiteId { get; set; }
+        public int SuiteId { get; set; }
 
         /// <summary>
         /// gets or sets the amount of tests in the test run marked as untested
         /// </summary>
         [DataMember]
-        public int? UntestedCount { get; set; }
+        public int UntestedCount { get; set; }
 
         /// <summary>
         /// gets or sets the address/URL of the test run in the user interface

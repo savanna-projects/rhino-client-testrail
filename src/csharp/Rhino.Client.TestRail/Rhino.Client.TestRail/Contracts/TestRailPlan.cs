@@ -46,48 +46,6 @@ namespace Rhino.Client.TestRail.Contracts
         public int CreatedOn { get; set; }
 
         /// <summary>
-        /// The amount of tests in the test plan with the respective custom status
-        /// </summary>
-        [DataMember]
-        public int CustomStatus1Count { get; set; }
-
-        /// <summary>
-        /// The amount of tests in the test plan with the respective custom status
-        /// </summary>
-        [DataMember]
-        public int CustomStatus2Count { get; set; }
-
-        /// <summary>
-        /// The amount of tests in the test plan with the respective custom status
-        /// </summary>
-        [DataMember]
-        public int CustomStatus3Count { get; set; }
-
-        /// <summary>
-        /// The amount of tests in the test plan with the respective custom status
-        /// </summary>
-        [DataMember]
-        public int CustomStatus4Count { get; set; }
-
-        /// <summary>
-        /// The amount of tests in the test plan with the respective custom status
-        /// </summary>
-        [DataMember]
-        public int CustomStatus5Count { get; set; }
-
-        /// <summary>
-        /// The amount of tests in the test plan with the respective custom status
-        /// </summary>
-        [DataMember]
-        public int CustomStatus6Count { get; set; }
-
-        /// <summary>
-        /// The amount of tests in the test plan with the respective custom status
-        /// </summary>
-        [DataMember]
-        public int CustomStatus7Count { get; set; }
-
-        /// <summary>
         /// The description of the test plan
         /// </summary>
         [DataMember]

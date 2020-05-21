@@ -4,15 +4,21 @@
  * on-line resources
  */
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 
 namespace Rhino.Client.TestRail.Extensions
 {
     internal static class Utilities
     {
+        // constants
+        private const StringComparison C = StringComparison.OrdinalIgnoreCase;
+
         /// <summary>
         /// Gets a trace text-writer trace listener
         /// </summary>
@@ -48,6 +54,67 @@ namespace Rhino.Client.TestRail.Extensions
                 ContractResolver = contractResolver,
                 Formatting = Formatting.Indented
             };
+        }
+
+        /// <summary>
+        /// Deserialize a response body into a valid TestRail contract
+        /// </summary>
+        /// <param name="responseBody">Contract response (as JSON)</param>
+        /// <returns>Constructed contract</returns>
+        public static IDictionary<string, object> AsCustomFields(this JToken responseBody)
+        {
+            // load into JToken collection
+            var tokens = Write(responseBody);
+
+            // load into custom fields dictionary
+            var customFields = new Dictionary<string, object>();
+            foreach (var token in tokens)
+            {
+                customFields.AddOrReplace(((JProperty)token).Name, token.First);
+            }
+            return customFields;
+        }
+
+        private static IEnumerable<JToken> Write(JToken token)
+        {
+            foreach (var item in token)
+            {
+                // add custom properties into results
+                if (((JProperty)item).Name.StartsWith("custom_", C))
+                {
+                    yield return item;
+                    continue;
+                }
+
+                // check for children
+                var hasChildren = item.Children().Any();
+                if (!hasChildren)
+                {
+                    continue;
+                }
+                WriteChildren(item);
+            }
+        }
+
+        private static void WriteChildren(JToken token)
+        {
+            foreach (var item in token.Children())
+            {
+                var isObject = item.Type.ToString().Equals("object", C);
+                var isArray = item.Type.ToString().Equals("array", C);
+                if (isArray)
+                {
+                    foreach (var arrayItem in token)
+                    {
+                        Write(arrayItem);
+                    }
+                }
+                if (!isObject)
+                {
+                    continue;
+                }
+                Write(item);
+            }
         }
     }
 }

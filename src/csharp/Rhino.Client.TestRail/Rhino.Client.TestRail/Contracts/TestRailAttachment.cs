@@ -10,7 +10,7 @@ using System.Runtime.Serialization;
 namespace Rhino.Client.TestRail.Contracts
 {
     [DataContract]
-    public class TestRailAttachment
+    public class TestRailAttachment:Contract
     {
         /// <summary>
         /// The unique ID for the attachment

@@ -10,8 +10,14 @@ using System.Runtime.Serialization;
 namespace Rhino.Client.TestRail.Contracts
 {
     [DataContract]
-    public class TestRailPlanEntry
+    public class TestRailPlanEntry : Contract
     {
+        /// <summary>
+        /// The ID of this entry
+        /// </summary>
+        [DataMember]
+        public string Id { get; set; }
+
         /// <summary>
         /// The ID of the test suite for the test run(s) (required)
         /// </summary>
@@ -46,7 +52,7 @@ namespace Rhino.Client.TestRail.Contracts
         /// An array of configuration IDs used for the test runs of the test plan entry (requires TestRail 3.1 or later)
         /// </summary>
         [DataMember]
-        public int[] ConfigIds { get; set; }
+        public int[] ConfigIds { get; set; } = new int[0];
 
         /// <summary>
         /// An array of case IDs for the custom case selection

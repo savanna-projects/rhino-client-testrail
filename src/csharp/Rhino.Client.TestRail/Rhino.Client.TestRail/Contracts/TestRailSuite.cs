@@ -12,7 +12,7 @@ namespace Rhino.Client.TestRail.Contracts
     /// contract which describes test-rail test-run entity
     /// </summary>
     [DataContract]
-    public class TestRailSuite
+    public class TestRailSuite : Contract
     {
         /// <summary>
         /// get or sets the date/time when the test suite was closed (as UNIX time-stamp)

@@ -27,30 +27,6 @@ namespace Rhino.Client.TestRail.Contracts
         public int? CreatedOn { get; set; }
 
         [DataMember]
-        public bool CustomAutomationSuitable { get; set; }
-
-        [DataMember]
-        public int? CustomAutomationType { get; set; }
-
-        [DataMember]
-        public int? CustomNeedUpdate { get; set; }
-
-        [DataMember]
-        public string CustomPreconds { get; set; }
-
-        [DataMember]
-        public bool CustomSanity { get; set; }
-
-        [DataMember]
-        public int CustomSeverity { get; set; }
-
-        [DataMember]
-        public CustomStep[] CustomStepsSeparated { get; set; }
-
-        [DataMember]
-        public int CustomTolerance { get; set; }
-
-        [DataMember]
         public int? DisplayOrder { get; set; }
 
         /// <summary>

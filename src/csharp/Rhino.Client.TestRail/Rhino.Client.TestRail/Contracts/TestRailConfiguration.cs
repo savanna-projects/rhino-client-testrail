@@ -8,6 +8,9 @@ using System.Runtime.Serialization;
 
 namespace Rhino.Client.TestRail.Contracts
 {
+    /// <summary>
+    /// Contract which describes test-rail configuration entity
+    /// </summary>
     [DataContract]
     public class TestRailConfiguration : Contract
     {
@@ -22,5 +25,8 @@ namespace Rhino.Client.TestRail.Contracts
 
         [DataMember]
         public int ProjectId { get; set; }
+
+        [DataMember]
+        public int GroupId { get; set; }
     }
 }

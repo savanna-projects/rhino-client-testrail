@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net461;net462;net47;net471;net472</TargetFrameworks>
+    <PackageProjectUrl>https://github.com/sroei/testrail-client-libraries</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/sroei/testrail-client-libraries/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Description>.NET Standard Client Libraries for Test Rail Test Case Management (cross platform)</Description>
+    <Authors>Roei Sabag</Authors>
+    <PackageTags>test rail testrail client automation</PackageTags>
+    <LangVersion>latest</LangVersion>
+    <Title>TestRail.ClientLibraries</Title>
+    <PackageId>TestRail.ClientLibraries</PackageId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
+</Project>
